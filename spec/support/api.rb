@@ -5,7 +5,7 @@ module ApiHelper
   private
 
   def app
-    Bookshelf::V1::Application.new
+    Bookshelf::API::Application.new
   end
 
   def response
