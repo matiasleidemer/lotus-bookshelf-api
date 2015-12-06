@@ -5,6 +5,7 @@ require 'lotus/controller'
 
 module Bookshelf
   module API
+    require_relative 'repository'
 
     Lotus::Controller.configure do
       handle_exceptions ENV['RACK_ENV'] == 'production'
@@ -16,9 +17,6 @@ module Bookshelf
         include Controllers::Authentication
         accept :json
       end
-    end
-
-    class Repository
     end
 
     class Application
